@@ -13,7 +13,7 @@ T3SS1 has 2 gene clusters—one on each chromosome. Therefore, I worked on each 
 Then, I used MAFFT (on UseGalaxy) to align these files. The outputs are:
 + MAFFT_chr1.fasta
 + MAFFT_chr2.fasta
-+ Both are in the T3SS1_chr12 folder.
++ Both are in the T3SS1_chr12 folder (does not show in here).
 
 Then, I took the core parts of each alignment and combined them into one file:
 + combined_chr12.fasta (found in the phylogenetic_tree_output folder)
