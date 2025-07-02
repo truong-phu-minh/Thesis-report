@@ -20,5 +20,5 @@ Then, I took the core parts of each alignment and combined them into one file:
 
 After that, I made a modified Nexus file (with the model I got from running IQ-TREE) and used it to build a phylogenetic tree with IQ-TREE3 using partitioned alignment.
 
-### 3. T6SS2 analysis
+## 3. T6SS2 analysis
 T6SS2 only has one cluster (22 genes) on chromosome 2.The process was basically the same as for T3SS1, but this does not have combined step.
