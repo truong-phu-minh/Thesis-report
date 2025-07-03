@@ -3,7 +3,7 @@
 This repository contains my implementation analysis for my bachelor thesis project. 
 
 ## 1. PyOrthoANI
-Calculate the ANI value based on four reference strains. 
+Calculate the ANI value based on four reference strains. Due to private data, the complete genome of strain BT85-28 isn't shown in this project.
 
 ## 2. T3SS1 analysis
 
