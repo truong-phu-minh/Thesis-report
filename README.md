@@ -13,10 +13,10 @@ T3SS1 has 2 gene clusters—one on each chromosome. Therefore, I worked on each 
 Then, I used MAFFT (on UseGalaxy) to align these files. The outputs are:
 + MAFFT_chr1.fasta
 + MAFFT_chr2.fasta
-+ Both are in the T3SS1_chr12 folder (does not show in here).
+Both are in the T3SS1_chr12 folder (MAFFT files haven't been shown in the folder).
 
 Then, I took the core parts of each alignment and combined them into one file:
-+ combined_chr12.fasta (found in the phylogenetic_tree_output folder)
++ combined_chr12.fasta (in the phylogenetic_tree_output folder)
 
 After that, I made a modified Nexus file (with the model I got from running IQ-TREE) and used it to build a phylogenetic tree with IQ-TREE3 using partitioned alignment.
 
