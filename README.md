@@ -1,4 +1,5 @@
-<img width="468" height="11" alt="image" src="https://github.com/user-attachments/assets/19e54307-5e39-4524-9328-068e6f1cbdf7" /># 🧬 Code availability
+<img width="468" height="11" alt="image" src="https://github.com/user-attachments/assets/19e54307-5e39-4524-9328-068e6f1cbdf7" />
+# 🧬 Code availability
 This repository contains my implementation analysis for my bachelor thesis project. 
 
 # 1. Introduction
