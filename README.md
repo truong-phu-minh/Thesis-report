@@ -1,39 +1,3 @@
-# 🧬 Code availability
-This repository contains my implementation analysis for my bachelor thesis project. 
-
-# 1. Introduction
-
-AHPND causes significant health issue in the aquaculture system, especially on the Whiteleg shrimp (Litopenaeus monodon), with 100% mortality rate after 3-5 days displaying clinical symptoms. pirAB has been identified as main virulence factors in AHPND pathogenesis. But not every strain containing pirAB can cause shrimp death, as it depends on alternative virulence factors, such as secretion systems, adherence, quorum sensing. Specifically, strain BT85-28 had been identified with no pirAB genes, but still induce death in normal shrimps, which was isolated in Ben Tre Province. Therefore, I conducted a comprehensive analysis on strain BT85-28, to illustrate other virulence factors that potentially contribute to the pathogenesis.
-Type III secretion 1 (T3SS1) and Type VI secretion 2 (T6SS2) has been researched as potential virulence factors in AHPND. Therefore, exploring the gene composition and structure can somehow explain its virulence mechanism apart from pirAB.
-
-# 2. Material and methods
-## 1/ Material
-- Short-read: From published NCBI under the accession code [SRX20502639]([url](https://www.ncbi.nlm.nih.gov/sra/SRX20502639[accn]))
-- Long-read: Lab provided.
-## 2/ Methods
-- I performed hybrid asssembly with Trycycler tool for generating a complete genome strain BT85-28. This step includes read filtering (fastp for short-read, Filtlong for long-read, to remove ambigious or low-quality reads), and Trycycler tutorial, with addition read polishing with Polypolish and BWA.
-- I submitted genome sequence to pubMLST to validate the strain name, by identifying 7 housekeeping genes. Then, I performed Average Nucleotide Identity (ANI) to compare sequence similarity to standard strain Vibrio parahaemolyticus RIMD 2210633 as a positive control, and 2 strains Vibrio campbellii and Vibrio cholerae for negative controls.
-- I conducted genome annotation with Bakta pipeline, exploring antimicrobial resistance genes (AMRFinderplus, ABricate, all of which were set to 60% identity and 60% coverage) and virulence factors (VFAnalyzer on the web interface).
-- To further explored its potential virulence factors and relationships, I extracted T3SS1 and T6SS2 regions from strain Vp RIMD 2210633. Then I used BLASTN to identify regions that contain T3SS1/T6SS2 in strain BT85-28 and all strains (127 strains) that have been assigned as "complete genome" on NCBI database, followed by aligning regions using MAFFT. Then, phylogenetic tree was constructed with IQ-TREE for T6SS2 and IQ-TREE3 for T3SS1, with an ultrabootstrap value of 1000. The output files were visualised in iTOL v7. Selected strains were reannotated with Bakta to generate GenBank files, and cluster structures were visualised with clinker.
-# 3. Result
-## 1/Complete genome assembly and genome validation
-The complete genome was assembled with GC content of 45.36%, approximate length to all common Vibrio parahaemolyticus, and has been submitted under the accession number GCA_030238765.2. The genome was confirmed with no plasmid pVA, and confirmed ambigious regions was located only in chromosome I. ANI analysis shows strain BT85-28 shares 98.32% to Vibrio parahaemolyticus RIMD 2210633, MLST assigned as ST2184, consistent with previous report on this strain.
-
-## 2/Profilling virulence factors and antimicrobial genes
-The VFDB result shows 155 virulence factor genes, associated with adherence, antiphagocytosis, chemotaxis, motility, iron uptake, quorum sensing, secretion system, toxin, colonisation, immune evasion, and endotoxin. There were 38 genes from T3SS1, with one unknown gene classified in T3SS1 secreted effectors.
-This strain possesses 12 AMR genes. Among these, eight genes have been previously reported, four AMR genes associated with multidrug efflux pumps, quaternary ammonium compounds, and chloramphenicol resistance were newly detected in this complete genome assembly.
-
-## 3/T3SS1 and T6SS2 phylogenetic tree analysis
-The phylogenetic tree based on T3SS1 alignment of 128 complete genomes revealed two major clades, in which clade 2 was further divided into two subclusters. The T6SS2 phylogenetic tree displayed one main clade and one outlier strain (DHO76). For subsequent structural comparison, reference selection followed a consistent principle: the reference strain RIMD 2210633, the target strain of this study (BT85-28), and representative strains randomly selected from each clade/subcluster.
-
-## 4/Structural diversity of T3SS1 and T6SS2 clusters
-Structural analysis reveals a clear structural difference between T3SS1. It has been classified into two subtypes: T3SS1a and T3SS1b. Strain 16-VB00198 has no gene between the sctU and vopQ, which can be explained by a separate cluster on subcluster 1. This suggests a novel subtype of T3SS1. Strains BT85-28, PH1339, and RIMD 2210633 have four additional genes: fldA, alpha/beta hydrolase, frsA, and lysR, which belong to T3SS1b, suggesting that strain BT85-28 may share the same mechanism of secreting virulence factors as the reference strain.
-Structural analysis of six strains from T6SS2 shows that Clade 2 is highly conserved. Strain BT85-28 has a similar conserved T6SS2 to the reference strain, suggesting they share the same mechanism of secreting toxins for bacterial competition. Notably, three loci encoding sPS1, cheY, and the Hpt domain shared the same orientation across all the analysed and selected strains.
-
-# Conclusion
-This study reveals the complete genome characterisation of V. parahaemolyticus strain BT85-28, an isolate associated with AHPND but lacking both pirABvp genes and pVA plasmid. The complete genome presents extensive virulence factors and antimicrobial resistance profiles. Comparative phylogenomic and structural analysis classified strain BT85-28 within the dominant T3SS1a subtype and the conserved T6SS2. These findings enrich the genomic resources database and explore alternative pathogenic mechanisms beyond plasmid-encoded toxins.
-
-
 # File note
 ## T3SS1 analysis
 T3SS1 has 2 gene clusters—one on each chromosome. Therefore, I worked on each cluster separately:
