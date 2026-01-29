@@ -1,4 +1,3 @@
-<img width="468" height="11" alt="image" src="https://github.com/user-attachments/assets/19e54307-5e39-4524-9328-068e6f1cbdf7" />
 # 🧬 Code availability
 This repository contains my implementation analysis for my bachelor thesis project. 
 
@@ -9,8 +8,8 @@ Type III secretion 1 (T3SS1) and Type VI secretion 2 (T6SS2) has been researched
 
 # 2. Material and methods
 ## 1/ Material
-Short-read: From published NCBI under the accession code [SRX20502639]([url](https://www.ncbi.nlm.nih.gov/sra/SRX20502639[accn]))
-Long-read: Lab provided.
+- Short-read: From published NCBI under the accession code [SRX20502639]([url](https://www.ncbi.nlm.nih.gov/sra/SRX20502639[accn]))
+- Long-read: Lab provided.
 ## 2/ Methods
 - I performed hybrid asssembly with Trycycler tool for generating a complete genome strain BT85-28. This step includes read filtering (fastp for short-read, Filtlong for long-read, to remove ambigious or low-quality reads), and Trycycler tutorial, with addition read polishing with Polypolish and BWA.
 - I submitted genome sequence to pubMLST to validate the strain name, by identifying 7 housekeeping genes. Then, I performed Average Nucleotide Identity (ANI) to compare sequence similarity to standard strain Vibrio parahaemolyticus RIMD 2210633 as a positive control, and 2 strains Vibrio campbellii and Vibrio cholerae for negative controls.
